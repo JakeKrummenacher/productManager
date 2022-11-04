@@ -8,7 +8,7 @@ module.exports.index = (request, response) => {
 }
 
 module.exports.findAllProducts = (request, response) => {
-    Product.find()
+    Product.find({})
         .then((allProducts) => {
             response.json({products: allProducts})
         })
