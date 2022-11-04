@@ -9,8 +9,10 @@ const Main = (props) => {
 
     return (
         <div>
+            <h1>Create New Product:</h1>
             <ProductForm allProducts = {allProducts} setAllProducts={setAllProducts} />
             <hr/>
+            <h1>View Existing Products:</h1>
             <AllProducts allProducts = {allProducts} setAllProducts = {setAllProducts} />
         </div>
     )
