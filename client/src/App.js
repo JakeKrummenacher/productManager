@@ -6,6 +6,7 @@ import './App.css';
 import ProductForm from './components/ProductForm';
 import AllProducts from './components/AllProducts';
 import ProductDetail from './components/ProductDetail';
+import EditProduct from './components/EditProduct';
 import Main from './views/Main';
 
 
@@ -17,7 +18,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main/>}></Route>
           <Route path='/products/:id' element={<ProductDetail/>}></Route>
-
+          <Route path='/products/edit/:id' element={<EditProduct/>}></Route>
         </Routes>
       
       </BrowserRouter>

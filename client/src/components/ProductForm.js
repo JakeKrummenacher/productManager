@@ -18,6 +18,9 @@ const ProductForm = (props) => {
         .then(res=>{
             console.log(res);
             console.log(res.data);
+            document.getElementById("title-input").value = "";
+            document.getElementById("price-input").value = null;
+            document.getElementById("desc-input").value = "";
             setAllProducts([...allProducts, res]);
         })
         .catch(err=>console.log(err))
@@ -29,19 +32,19 @@ const ProductForm = (props) => {
             <p>
                 <label>Title</label><br/>
                 
-                <input type="text" onChange = {(e)=>setTitle(e.target.value)}/>
+                <input id="title-input" type="text" onChange = {(e)=>setTitle(e.target.value)}/>
             </p>
             <p>
                 <label>Price</label><br/>
                 
-                <input type="number" min="0.01" step=".01" onChange = {(e)=>setPrice(e.target.value)}/>
+                <input id="price-input" type="number" min="0.01" step=".01" onChange = {(e)=>setPrice(e.target.value)}/>
             </p>
             <p>
                 <label>Description</label><br/>
                 
-                <input type="text" onChange = {(e)=>setDescription(e.target.value)}/>
+                <input id="desc-input" type="text" onChange = {(e)=>setDescription(e.target.value)}/>
             </p>
-            <input type="submit"/>
+            <input className="btn btn-primary" type="submit"/>
         </form>
     )
 }
